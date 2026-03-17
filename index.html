@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Victor Nolasco Perez</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #121212;
+    }
+
+    .tabs button {
+      margin-right: 10px;
+      padding: 10px 16px;
+      background: none;
+      border: 1px solid #444;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .tabs button:hover {
+      background: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .project {
+      background: #1b1b1b;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>Victor Nolasco Perez</h2>
+  <a href="resume.pdf" style="color:white;">Download Resume</a>
+</header>
+
+<div class="tabs" style="padding:20px 40px;">
+  <button onclick="showTab('about')">About Me</button>
+  <button onclick="showTab('skills')">Skills</button>
+  <button onclick="showTab('projects')">Projects</button>
+</div>
+
+<div class="container">
+
+  <!-- ABOUT -->
+  <div id="about" class="section active">
+    <img src="headshot.jpg" />
+    <h2>About Me</h2>
+    <p>
+      I am a UC Berkeley engineering student interested in building practical
+      engineering systems. I enjoy working on projects that involve design,
+      structures, and hands-on problem solving.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="skills" class="section">
+    <h2>Professional Skills</h2>
+    <ul>
+      <li>Structural Analysis</li>
+      <li>CAD / Rhino 3D</li>
+      <li>SAP2000</li>
+      <li>Python</li>
+      <li>Raspberry Pi</li>
+      <li>Engineering Design</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <div id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Cal Seismic Team</h3>
+      <p>Worked on structural design and testing using engineering tools.</p>
+    </div>
+
+    <div class="project">
+      <h3>Music Selector</h3>
+      <p>Built a Raspberry Pi system using contextual inputs.</p>
+    </div>
+
+    <div class="project">
+      <h3>DIY Speaker</h3>
+      <p>Designing a Bluetooth speaker with custom components.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function showTab(tabId) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(sec => sec.classList.remove('active'));
+
+  document.getElementById(tabId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
